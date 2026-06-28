@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil - Ouvidoria Proaluno</title>
+    <meta name="description" content="Gerencie seu perfil e acompanhe suas manifestações na Ouvidoria Proaluno">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="CSS/colab_perfil.css"> 
+
+</head>
+<body>
+    <section id="profile-section" class="profile-page">
+        <div class="background-decorations">
+            <!-- Elementos decorativos otimizados -->
+            <div class="deco-item" style="left: 5%; top: 5%; width: 300px; height: 300px; background: radial-gradient(circle, var(--c-primary) 0%, transparent 70%);"></div>
+            <div class="deco-item" style="left: -5%; top: 30%; width: 250px; height: 250px; background: radial-gradient(circle, var(--c-secondary) 0%, transparent 70%);"></div>
+            <div class="deco-item" style="right: -10%; top: 25%; width: 350px; height: 350px; background: radial-gradient(circle, var(--c-primary) 0%, transparent 70%);"></div>
+            <div class="deco-item" style="right: 10%; top: 10%; width: 200px; height: 200px; background: radial-gradient(circle, var(--c-secondary) 0%, transparent 70%);"></div>
+        </div>
+
+        <div class="page-content">
+            <a href="colab_home.html" class="back-button">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M19 12H5m0 0l6-6m-6 6l6 6"/>
+                </svg>
+                Voltar
+            </a>
+
+            <main class="profile-card">
+                <div class="profile-header">
+                    <div class="profile-banner"></div>
+                    <div class="profile-picture-wrapper">
+                        <div class="profile-picture" id="profilePicture">
+                            NN
+                        </div>
+                    </div>
+                    <div class="profile-actions">
+                        <button class="profile-action" id="changePhotoBtn">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                            </svg>
+                            Trocar Foto
+                        </button>
+                        <button class="profile-action" id="changeBannerBtn">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                            </svg>
+                            Trocar Banner
+                        </button>
+                    </div>
+                </div>
+
+                <div class="profile-body">
+                    <form class="user-form" id="profileForm">
+                        <div class="form-group">
+                            <label>
+                                Nome Exibido
+                                <a href="#" class="change-link" data-field="displayName">Mudar</a>
+                            </label>
+                            <div class="form-value-box" id="displayName">NOME NOME NOME</div>
+                        </div>
+                        <div class="form-group">
+                            <label>
+                                Nome de Usuário
+                                <a href="#" class="change-link" data-field="username">Mudar</a>
+                            </label>
+                            <div class="form-value-box" id="username">NOME.DE_USUARIO</div>
+                        </div>
+                        <div class="form-group">
+                            <label>
+                                E-mail
+                                <a href="#" class="change-link" data-field="email">Mudar</a>
+                            </label>
+                            <div class="form-value-box with-action">
+                                <span id="email">RM99999@DOCENTE.FIEB.EDU.BR</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>
+                                Senha
+                                <a href="#" class="change-link" data-field="password">Mudar</a>
+                            </label>
+                            <div class="form-value-box with-action">
+                                <span id="password">••••••••••••••</span>
+                                <a href="#" class="show-link" data-target="password">Mostrar</a>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>
+                                Telefone
+                                <a href="#" class="change-link" data-field="phone">Mudar</a>
+                            </label>
+                            <div class="form-value-box with-action">
+                                <span id="phone">XXXXXX0902</span>
+                                <a href="#" class="show-link" data-target="phone">Mostrar</a>
+                            </div>
+                        </div>
+                    </form>
+
+                    <div class="logout-container">
+                        <a href="login.html" class="logout-button" id="logoutButton">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"/>
+                            </svg>
+                            Sair da Conta
+                        </a>
+                    </div>
+    </section>
+      <script src="JS/colab_perfil.js"></script>
+
+</body>
+</html>

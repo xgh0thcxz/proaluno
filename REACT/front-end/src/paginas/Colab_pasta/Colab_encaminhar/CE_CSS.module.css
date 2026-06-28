@@ -1,0 +1,263 @@
+/* ColabEncaminhar.module.css */
+/* Variáveis globais vêm do global.css */
+
+/* ── Tema da página ── */
+.pageTheme {
+  --color-primary:   #3d1d69;
+  --color-secondary: #872da5;
+  --color-accent:    #dada5b;
+}
+
+/* ── Skip Link ── */
+.skipLink {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--color-primary);
+  color: #fff;
+  padding: 8px;
+  z-index: 100;
+  text-decoration: none;
+}
+.skipLink:focus {
+  top: 0;
+}
+
+/* ── SR Only ── */
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ── Main Content Section ── */
+.mainContentSection {
+  padding: 3rem 0;
+}
+
+.mainContainer {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.mainTitle {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--color-primary);
+  font-weight: 700;
+  line-height: 1.2;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.mainDescription {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  opacity: 0.8;
+  line-height: 1.6;
+}
+
+.divider {
+  border: none;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #ddd, transparent);
+  margin: 2rem 0;
+}
+
+/* ── Form Wrapper ── */
+.formWrapper {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  border-radius: var(--border-radius);
+  padding: 2.5rem;
+  box-shadow: var(--shadow);
+  margin: 0 auto;
+}
+
+.manifestationForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* ── Form Groups ── */
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.8rem;
+}
+
+.formLabel {
+  color: var(--color-text-light);
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.optionalText {
+  color: var(--color-accent);
+  opacity: 0.7;
+  font-size: 0.9rem;
+}
+
+.formInput {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  border-radius: var(--border-radius);
+  border: none;
+  font-size: 1rem;
+  transition: var(--transition);
+}
+
+.formInput:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3);
+}
+
+.formInput.error {
+  border: 2px solid #f44336;
+}
+
+.fieldError {
+  color: #ffcccc;
+  font-size: 0.85rem;
+  margin-top: 0.25rem;
+}
+
+/* ── Sector Selection ── */
+.sectorSelection {
+  align-items: center;
+  text-align: center;
+}
+
+.sectorButtons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.sectorBtn {
+  background-color: white;
+  color: var(--color-text-dark);
+  border: 2px solid transparent;
+  padding: 0.8rem 1.5rem;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  min-width: 140px;
+}
+
+.sectorBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.sectorBtn.active {
+  background-color: var(--color-accent);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.sectorBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* ── Submit Button ── */
+.submitBtn {
+  background-color: var(--color-accent);
+  color: var(--color-text-dark);
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: var(--transition);
+  margin-top: 1rem;
+}
+
+.submitBtn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.submitBtn:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* ── Feedback Messages ── */
+.message {
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  margin-top: 1rem;
+  text-align: center;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.successMessage {
+  background-color: rgba(76, 175, 80, 0.1);
+  color: #2e7d32;
+  border: 1px solid #4caf50;
+}
+
+.errorMessage {
+  background-color: rgba(244, 67, 54, 0.1);
+  color: #c62828;
+  border: 1px solid #f44336;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .mainTitle {
+    font-size: 2rem;
+  }
+
+  .mainDescription {
+    font-size: 1.1rem;
+  }
+
+  .formWrapper {
+    padding: 1.5rem;
+  }
+
+  .sectorButtons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sectorBtn {
+    width: 100%;
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .mainContentSection {
+    padding: 2rem 0;
+  }
+
+  .mainTitle {
+    font-size: 1.8rem;
+  }
+}

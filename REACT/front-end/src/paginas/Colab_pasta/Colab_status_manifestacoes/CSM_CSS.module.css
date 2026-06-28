@@ -1,0 +1,377 @@
+/* CSM_CSS.module.css */
+
+/* ⚠️ Variáveis globais — mantenha no index.css ou global.css */
+/*
+:root {
+  --color-primary: #3d1d69;
+  --color-secondary: #872da5;
+  --color-accent: #dada5b;
+  --color-text-light: #ffffff;
+  --color-text-dark: #000000;
+  --color-background: #f7f7f7;
+  --color-gray: #696969;
+  --border-radius: 12px;
+  --shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  --shadow-hover: 0 12px 25px rgba(0, 0, 0, 0.15);
+  --transition: all 0.3s ease;
+}
+*/
+
+/* ===== BODY / WRAPPER ===== */
+.body {
+  font-family: 'Inter', Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--color-text-dark);
+  background-color: var(--color-background);
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ===== SKIP LINK (Acessibilidade) ===== */
+.skipLink {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--color-primary);
+  color: white;
+  padding: 8px;
+  z-index: 100;
+  text-decoration: none;
+}
+
+.skipLink:focus {
+  top: 0;
+}
+
+/* ===== MAIN CONTENT ===== */
+.mainContent {
+  padding: 3rem 0;
+}
+
+/* ===== STATUS CHECKER SECTION ===== */
+.statusCheckerSection {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.checkerTitle {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: var(--color-primary);
+  font-weight: 700;
+  line-height: 1.2;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.dividerLine {
+  border: none;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #ddd, transparent);
+  margin: 2rem 0;
+}
+
+.checkerDescription {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  opacity: 0.8;
+  line-height: 1.6;
+}
+
+.protocolForm {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  border-radius: var(--border-radius);
+  padding: 2.5rem;
+  box-shadow: var(--shadow);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.protocolForm label {
+  display: block;
+  color: var(--color-text-light);
+  margin-bottom: 1rem;
+  font-weight: 600;
+  text-align: left;
+}
+
+.protocolForm input {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  border-radius: var(--border-radius);
+  border: none;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  transition: var(--transition);
+}
+
+.protocolForm input:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3);
+}
+
+.protocolForm button {
+  background-color: var(--color-accent);
+  color: var(--color-text-dark);
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: var(--transition);
+  width: 100%;
+}
+
+.protocolForm button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* ===== ERROR MESSAGE ===== */
+.errorMessage {
+  color: #ff6b6b;
+  background-color: rgba(255, 107, 107, 0.1);
+  border: 1px solid #ff6b6b;
+  border-radius: var(--border-radius);
+  padding: 1rem;
+  margin-top: 1rem;
+  text-align: center;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* ===== STATUS DISPLAY SECTION ===== */
+.statusDisplaySection {
+  margin-bottom: 3rem;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.dividerLine2 {
+  border: none;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #ddd, transparent);
+  margin: 2rem 0;
+}
+
+.statusCard {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  border-radius: var(--border-radius);
+  padding: 2rem;
+  box-shadow: var(--shadow);
+  max-width: 900px;
+  margin: 0 auto;
+  animation: fadeIn 0.5s ease;
+}
+
+.statusCardInner {
+  background: white;
+  border-radius: var(--border-radius);
+  padding: 2.5rem;
+  box-shadow: var(--shadow);
+}
+
+.statusTitle {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+/* ===== STATUS BADGES ===== */
+.statusResolvido {
+  color: #4caf50;
+  border-left-color: #4caf50;
+}
+
+.statusAnalise {
+  color: #ff9800;
+  border-left-color: #ff9800;
+}
+
+.statusEncaminhado {
+  color: #2196f3;
+  border-left-color: #2196f3;
+}
+
+/* ===== TIPO DE MANIFESTAÇÃO ===== */
+.reclamacao {
+  color: #f44336;
+  font-weight: 600;
+}
+
+.sugestao {
+  color: #4caf50;
+  font-weight: 600;
+}
+
+.solicitacao {
+  color: #2196f3;
+  font-weight: 600;
+}
+
+.elogio {
+  color: #9c27b0;
+  font-weight: 600;
+}
+
+.denuncia {
+  color: #ff9800;
+  font-weight: 600;
+}
+
+/* ===== DETAILS GRID ===== */
+.statusDetail {
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+.statusDetail strong {
+  font-weight: 600;
+}
+
+.detailsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  margin: 20px 0;
+}
+
+/* ===== RESPONSE BOX ===== */
+.responseBox {
+  background: #f9f9f9;
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  border-left: 4px solid var(--color-primary);
+  margin-top: 20px;
+}
+
+.responseBox h3 {
+  margin-bottom: 1rem;
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.responseBox p {
+  line-height: 1.6;
+  opacity: 0.8;
+}
+
+/* ===== PAGE ACTIONS ===== */
+.pageActionsSection {
+  margin-bottom: 2rem;
+}
+
+.actionsContainer {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin: 30px 0;
+}
+
+.actionButton {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: var(--transition);
+  text-align: center;
+}
+
+.btnVoltar {
+  background-color: #6c757d;
+  color: var(--color-text-light);
+}
+
+.btnVoltar:hover {
+  background-color: #5a6268;
+  transform: translateY(-2px);
+}
+
+.btnHome {
+  background-color: var(--color-primary);
+  color: var(--color-text-light);
+}
+
+.btnHome:hover {
+  background-color: var(--color-secondary);
+  transform: translateY(-2px);
+}
+
+/* ===== ACESSIBILIDADE ===== */
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ===== ANIMAÇÕES ===== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 768px) {
+  .checkerTitle {
+    font-size: 2rem;
+  }
+  .checkerDescription {
+    font-size: 1.1rem;
+  }
+  .protocolForm {
+    padding: 1.5rem;
+  }
+  .statusCard {
+    padding: 1.5rem;
+  }
+  .statusCardInner {
+    padding: 1.5rem;
+  }
+  .statusTitle {
+    font-size: 1.5rem;
+  }
+  .actionsContainer {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  .actionButton {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 15px;
+  }
+  .mainContent {
+    padding: 2rem 0;
+  }
+  .checkerTitle {
+    font-size: 1.8rem;
+  }
+}

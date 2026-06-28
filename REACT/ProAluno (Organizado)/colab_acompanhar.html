@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sistema de Resposta a Manifestações - Proaluno">
+    <title>Proaluno - Responder Manifestações</title>
+    <link rel="stylesheet" href="CSS/colab_acompanhar.css">
+</head>
+<body>
+    <header class="header-section" role="banner">
+        <div class="container header-container">
+            <div class="logo-area">
+                <a href="colab_home.html" class="logo-link">
+                    <img src="imagens/logo_branca2.png" alt="Proaluno - Página inicial" class="logo-image">
+                </a>
+            </div>
+            
+            <div class="header-content">
+                <nav class="main-nav" role="navigation" aria-label="Navegação principal">
+                    <a href="colab_home.html">HOME</a>
+                    <a href="sobre.html">SOBRE NÓS</a>
+                    <a href="contato.html">CONTATO</a>
+                </nav>
+                
+                <a href="colab_perfil.html" class="login-btn">
+                <div class="user-profile">
+                    <div style="width: 32px; height: 32px; background: rgba(255,255,255,0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center;">👤</div>
+                    <span style="color: #ffffff;">Olá, colaborador!</span>
+                </div>
+                </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content-section" id="main-content">
+        <div class="container main-container">
+            <h1 class="main-title">Responda as Manifestações dos Alunos</h1>
+            <p class="main-description">Busque por um protocolo para visualizar a manifestação e enviar uma resposta.</p>
+
+            <!-- Formulário de Busca -->
+            <div class="search-wrapper">
+                <form class="search-form" id="search-form">
+                    <div class="form-group">
+                        <label for="protocol-input" class="form-label">Número do Protocolo</label>
+                        <input type="text" id="protocol-input" class="form-input" placeholder="Ex: MANIF2025-0585" required>
+                    </div>
+                    <button type="submit" class="search-button">Buscar Manifestação</button>
+                    
+                    <div class="message error-message" id="searchErrorMessage">
+                        Protocolo não encontrado. Verifique o número digitado.
+                    </div>
+                </form>
+            </div>
+
+            <hr class="divider">
+
+            <!-- Card da Manifestação -->
+            <div class="manifestation-card" id="manifestation-card">
+                <div class="manifestation-header">
+                    <span class="manifestation-type" id="manifestation-type">Reclamação</span>
+                    <span class="protocol-number">Protocolo: <span id="protocol-display">MANIF2025-0585</span></span>
+                </div>
+
+                <div class="manifestation-details">
+                    <div class="detail-item">
+                        <span class="detail-label">Data de Publicação</span>
+                        <span class="detail-value" id="publication-date">05/08/2025</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Status</span>
+                        <span class="status-indicator status-pending" id="status-display">Pendente</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Aluno</span>
+                        <span class="detail-value" id="student-name">Anônimo</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Assunto</span>
+                        <span class="detail-value" id="manifestation-subject">Infraestrutura</span>
+                    </div>
+                </div>
+
+                <div class="manifestation-content">
+                    <span class="detail-label">Mensagem</span>
+                    <p class="detail-value" id="manifestation-message">A porta do banheiro feminino está quebrada e não fecha corretamente, e o bebedouro próximo à quadra está sempre sem água.</p>
+                </div>
+            </div>
+
+            <!-- Formulário de Resposta -->
+            <form class="response-form" id="response-form">
+                <div class="form-group">
+                    <label for="response-text" class="form-label">Sua Resposta:</label>
+                    <textarea id="response-text" class="form-textarea" placeholder="Digite aqui sua resposta à manifestação..." required></textarea>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-submit">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+                        </svg>
+                        Enviar Resposta
+                    </button>
+                    <button type="reset" class="btn btn-delete">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                        </svg>
+                        Limpar
+                    </button>
+                </div>
+
+                <div class="message error-message" id="responseErrorMessage">
+                    Por favor, preencha o campo de resposta.
+                </div>
+            </form>
+
+            <!-- Animação de Sucesso -->
+            <div class="success-animation" id="success-animation">
+                <div class="success-icon">🎉</div>
+                <div class="success-message">Resposta enviada com sucesso!</div>
+                <p>A resposta foi registrada e o aluno será notificado.</p>
+                <button class="btn btn-submit" onclick="resetPage()" style="margin-top: 2rem;">
+                    Responder Outra Manifestação
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-logo">
+                    <a href="colab_home.html" aria-label="Proaluno - Página inicial">
+                        <img src="imagens/logo_branca2.png" alt="Proaluno Logo">
+                    </a>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Início</h4>
+                        <ul>
+                            <li><a href="colab_home.html">Home</a></li>
+                            <li><a href="#about">Sobre nós</a></li>
+                            <li><a href="#contact">Contato</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Contato</h4>
+                        <ul>
+                            <li>E-mail: proaluno@fieb.edu.br</li>
+                            <li>Telefone: (11) 91234-5678</li>
+                            <li>Atendimento: 8:00 às 17:00</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Suporte</h4>
+                        <ul>
+                            <li><a href="#faq">FAQ</a></li>
+                            <li><a href="#telefones">Telefones</a></li>
+                            <li><a href="#chat">Chat</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="footer-social">
+                    <div class="social-icons">
+                        <a href="#" aria-label="Twitter">𝕏</a>
+                        <a href="#" aria-label="Instagram">📷</a>
+                        <a href="#" aria-label="WhatsApp">💬</a>
+                    </div>
+                    <a href="#contact" class="footer-contact-button">Contato</a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 Proaluno. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+        <script src="JS/colab_acompanhar.js"></script>
+</body>
+</html>

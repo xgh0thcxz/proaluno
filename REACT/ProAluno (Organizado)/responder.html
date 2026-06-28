@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sistema de Resposta a Manifestações - Proaluno">
+    <title>Proaluno - Responder Manifestações</title>
+      <link rel="stylesheet" href="CSS/responder.css"> 
+
+</head>
+<body>
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+    
+    <header class="header-section" role="banner">
+        <div class="container header-container">
+            <div class="logo-area">
+                <a href="colab_home.html" class="logo-link">
+                    <img src="imagens/logo_branca2.png" class="logo-image">
+                </a>
+            </div>
+            
+            <div class="header-content">
+                <nav class="main-nav" role="navigation" aria-label="Navegação principal">
+                    <a href="colab_home.html">HOME</a>
+                    <a href="colab_sobre.html">SOBRE NÓS</a>
+                </nav>
+                
+               <div class="user-profile">
+                    <div style="width: 32px; height: 32px; background: rgba(255,255,255,0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center;">👤</div>
+                    <a href="colab_perfil.html"><span style="color: white;">Olá, colaborador!</span></a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content-section" id="main-content">
+        <div class="container main-container">
+            <h1 class="main-title">Responda as Manifestações dos Alunos</h1>
+            <p class="main-description">Analise as manifestações recebidas e forneça respostas adequadas para cada caso.</p>
+
+            <div class="manifestation-card">
+                <div class="manifestation-header">
+                    <span class="manifestation-type">Reclamação</span>
+                    <span class="protocol-number">Protocolo: MANIF2025-0585</span>
+                </div>
+                
+                <div class="manifestation-details">
+                    <div class="detail-item">
+                        <span class="detail-label">Data de Publicação</span>
+                        <span class="detail-value">05/08/2025</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Status</span>
+                        <span class="status-indicator">Pendente</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Aluno</span>
+                        <span class="detail-value">Anônimo</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Assunto</span>
+                        <span class="detail-value">Infraestrutura</span>
+                    </div>
+                </div>
+                
+                <div class="manifestation-content">
+                    <span class="detail-label">Mensagem</span>
+                    <p class="detail-value">A porta do banheiro feminino está quebrada e não fecha corretamente, e o bebedouro próximo à quadra está sempre sem água.</p>
+                </div>
+            </div>
+
+            <form class="response-form" id="response-form">
+                <div class="form-group">
+                    <label for="response-text" class="form-label">Sua Resposta:</label>
+                    <textarea id="response-text" class="form-textarea" placeholder="Digite aqui sua resposta à manifestação..." required></textarea>
+                </div>
+                
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-submit">Enviar Resposta</button>
+                    <button type="reset" class="btn btn-delete">Limpar</button>
+                </div>
+                
+                <div class="message success-message" id="successMessage">
+                    Resposta enviada com sucesso!
+                </div>
+                
+                <div class="message error-message" id="errorMessage">
+                    Por favor, preencha o campo de resposta.
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <!-- Footer Padronizado -->
+   <footer class="site-footer" role="contentinfo">
+    <div class="container">
+        <div class="footer-container">
+            <!-- Logo -->
+            <div class="footer-logo">
+                <a href="colab_home.html" aria-label="Proaluno - Página inicial">
+                    <img src="imagens/logo_branca2.png" alt="Proaluno Logo">
+                </a>
+            </div>
+            
+            <!-- Links em linha -->
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>Início</h4>
+                    <ul>
+                        <li><a href="colab_home.html">Home</a></li>
+                        <li><a href="#">Sobre nós</a></li>
+                        <li><a href="#">Contato</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Contato</h4>
+                    <ul>
+                        <li>E-mail: proaluno@fieb.edu.br</li>
+                        <li>Telefone: (11) 91234-5678</li>
+                        <li>Atendimento: 8:00 às 17:00</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Suporte</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Telefones</a></li>
+                        <li><a href="#">Chat</a></li>
+                        <li><a href="#">Feedback</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Social e Contato -->
+            <div class="footer-social">
+                <div class="social-icons">
+                    <a href="#" aria-label="Twitter">𝕏</a>
+                    <a href="#" aria-label="Instagram">📷</a>
+                    <a href="#" aria-label="WhatsApp">💬</a>
+                </div>
+                <a href="#" class="footer-contact-button">Contato</a>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2023 Proaluno. Todos os direitos reservados.</p>
+        </div>
+    </div>
+</footer>
+      <script src="JS/responder.js"></script>
+
+</body>
+</html>

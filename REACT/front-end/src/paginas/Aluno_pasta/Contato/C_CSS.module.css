@@ -1,0 +1,346 @@
+/* ── Feedback Section ── */
+.feedbackSection {
+    padding: 8rem 0;
+    position: relative;
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    min-height: 100vh;
+}
+
+.feedbackSection::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:
+        radial-gradient(circle at 20% 80%, rgba(124, 58, 237, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.03) 0%, transparent 50%);
+    z-index: 0;
+}
+
+.feedbackContainer {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.feedbackIntro {
+    max-width: 800px;
+    margin: 0 auto 4rem;
+    text-align: center;
+}
+
+.feedbackTitle {
+    font-family: var(--font-secondary);
+    font-size: 3rem;
+    font-weight: 600;
+    background: linear-gradient(135deg, var(--purple-primary) 0%, var(--purple-primary-dark) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 1.5rem;
+    line-height: 1.9;
+}
+
+.feedbackDescription {
+    font-size: 1.2rem;
+    color: var(--color-text-muted);
+    line-height: 1.7;
+}
+
+.feedbackContentGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+}
+
+/* ── Form ── */
+.formWrapper {
+    position: relative;
+}
+
+.formCard {
+    background: var(--white-primary);
+    border-radius: var(--border-radius-xl);
+    padding: 3rem;
+    box-shadow: var(--shadow-xl);
+    position: relative;
+    overflow: hidden;
+}
+
+.formCard::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(135deg, var(--purple-primary) 0%, var(--purple-accent) 100%);
+}
+
+.formCard form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.formGroup label {
+    font-weight: 600;
+    color: var(--color-text-dark);
+    font-size: 1rem;
+}
+
+.formGroup input,
+.formGroup textarea {
+    background: var(--color-background-alt);
+    border: 2px solid var(--color-border);
+    border-radius: var(--border-radius);
+    padding: 1rem 1.25rem;
+    font-family: var(--font-primary);
+    font-size: 1rem;
+    transition: var(--transition);
+    resize: vertical;
+}
+
+.formGroup input:focus,
+.formGroup textarea:focus {
+    outline: none;
+    border-color: var(--purple-primary);
+    box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.1);
+    background: var(--white-primary);
+}
+
+.formGroup input::placeholder,
+.formGroup textarea::placeholder {
+    color: var(--color-text-muted);
+}
+
+/* ── Estado de erro nos inputs ── */
+.inputError {
+    border-color: var(--color-error) !important;
+    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1) !important;
+}
+
+.errorMessage {
+    color: var(--color-error);
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+}
+
+/* ── Submit Button ── */
+.submitBtn {
+    background: linear-gradient(135deg, var(--purple-primary) 0%, var(--purple-primary-dark) 100%);
+    color: var(--white-primary);
+    border: none;
+    border-radius: var(--border-radius-lg);
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    box-shadow: var(--shadow-md);
+}
+
+.submitBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+.submitBtn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* ── Contact Card ── */
+.contactWrapper {
+    position: relative;
+}
+
+.contactCard {
+    background: var(--white-primary);
+    border-radius: var(--border-radius-xl);
+    padding: 3rem;
+    box-shadow: var(--shadow-xl);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.contactCard::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(135deg, var(--purple-accent) 0%, var(--purple-secondary) 100%);
+}
+
+.contactSocialIcons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.socialIcon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--purple-primary) 0%, var(--purple-accent) 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white-primary);
+    font-size: 2rem;
+    transition: var(--transition);
+    box-shadow: var(--shadow-md);
+}
+
+.socialIcon:hover {
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: var(--shadow-lg);
+}
+
+.contactDetails {
+    text-align: center;
+}
+
+.contactDetails p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: var(--color-text-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.contactDetails strong {
+    color: var(--purple-primary);
+    font-weight: 600;
+}
+
+/* ── Modal de Sucesso ── */
+.successModal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition);
+}
+
+.successModalActive {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modalContent {
+    background: var(--white-primary);
+    border-radius: var(--border-radius-xl);
+    padding: 3rem;
+    text-align: center;
+    max-width: 500px;
+    width: 90%;
+    box-shadow: var(--shadow-xl);
+    transform: scale(0.7);
+    transition: var(--transition);
+}
+
+.successModalActive .modalContent {
+    transform: scale(1);
+}
+
+.successIcon {
+    width: 80px;
+    height: 80px;
+    background: var(--color-success);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    color: var(--white-primary);
+    font-size: 2.5rem;
+}
+
+.modalTitle {
+    font-family: var(--font-secondary);
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-success);
+    margin-bottom: 1rem;
+}
+
+.modalMessage {
+    color: var(--color-text-muted);
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.modalCloseBtn {
+    background: var(--purple-primary);
+    color: var(--white-primary);
+    border: none;
+    border-radius: var(--border-radius);
+    padding: 0.75rem 2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.modalCloseBtn:hover {
+    background: var(--purple-primary-dark);
+    transform: translateY(-2px);
+}
+
+/* ── Responsivo ── */
+@media (max-width: 768px) {
+    .feedbackContentGrid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .feedbackTitle {
+        font-size: 2rem;
+    }
+
+    .formCard,
+    .contactCard {
+        padding: 2rem 1.5rem;
+    }
+
+    .contactSocialIcons {
+        gap: 1rem;
+    }
+
+    .socialIcon {
+        width: 60px;
+        height: 60px;
+    }
+}

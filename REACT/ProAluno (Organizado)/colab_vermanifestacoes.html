@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Área do colaborador da Ouvidoria Educacional - Proaluno">
+    <title>Proaluno - Manifestações</title>
+      <link rel="stylesheet" href="CSS/colab_vermanifestacoes.css"> 
+
+</head>
+<body>
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+    
+    <header class="site-header" role="banner">
+        <div class="container header-container">
+            <div class="logo-area">
+                 <a href="colab_home.html" class="logo" aria-label="Proaluno - Página inicial">
+                <img src="imagens/logo_branca2.png" alt="Proaluno Logo" class="logo-img">
+            </a>
+            </div>
+            
+            <nav class="main-nav" role="navigation" aria-label="Navegação principal">
+                <ul>
+                    <li><a href="colab_home.html">HOME</a></li>
+                    <li><a href="#sobre">SOBRE NÓS</a></li>
+                    <li><a href="#contato">CONTATO</a></li>
+                </ul>
+            </nav>
+            
+             <a href="colab_perfil.html" class="login-btn">
+                <div class="user-profile">
+                    <div style="width: 32px; height: 32px; background: rgba(255,255,255,0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center;">👤</div>
+                    <span style="color: #ffffff;">Olá, colaborador!</span>
+                </div>
+                </a>
+            </div>
+        </div>
+    </header>
+    
+    <main id="main-content" class="main-content">
+        <div class="container">
+            <section class="intro-section">
+                <h1 class="intro-title">Ouça e veja as manifestações da sua unidade escolar</h1>
+                <p class="intro-description">Este é o momento de ouvir atentamente o que o manifestante tem a dizer, buscando compreender o contexto e a necessidade apresentada. A escuta ativa é essencial para que a ouvidoria atue de forma justa e eficaz.</p>
+                <hr class="divider">
+            </section>
+
+            <section id="filters" class="filters-section">
+                <div class="filter-box">
+                    <label for="unit-select">Selecione a sua unidade</label>
+                    <div class="custom-select">
+                        <span>ITB Brasilio Flores de Azevedo</span>
+                        <div style="width: 16px; height: 16px; background: rgba(0,0,0,0.2); border-radius: 2px; transform: rotate(90deg);"></div>
+                    </div>
+                    <button class="btn btn-consult">Consultar Manifestações</button>
+                </div>
+            </section>
+
+            <hr class="divider">
+
+            <section id="manifestations" class="manifestations-list-section">
+                <div class="manifestations-list">
+                    <article class="manifestation-card type-reclamacao">
+                        <div class="card-details">
+                            <p><strong>Tipo de Manifestação:</strong> <span class="type-text">Reclamação</span></p>
+                            <p><strong>Data de Publicação:</strong> 05/08/2025</p>
+                            <p><strong>Status:</strong> Pendente</p>
+                            <p><strong>Nº de Protocolo:</strong> MANIF2025-0585</p>
+                        </div>
+                        <div class="card-summary">
+                            <p><strong>Aluno:</strong> Anônimo</p>
+                            <p><strong>Assunto:</strong> Infraestrutura</p>
+                            <p><strong>Resumo:</strong> A porta do banheiro feminino está quebrada e não fecha corretamente. O bebedouro próximo à quadra está sempre sem água. O...</p>
+                        </div>
+                        <div class="card-actions">
+                            <a href="encaminhar.html"> <button class="btn btn-resolver">Resolver</button> </a>
+                            <a href="responder.html"> <button class="btn btn-responder">Responder</button> </a>
+                        </div>
+                    </article>
+
+                    <article class="manifestation-card type-elogio">
+                        <div class="card-details">
+                            <p><strong>Tipo de Manifestação:</strong> <span class="type-text">Elogio</span></p>
+                            <p><strong>Data de Publicação:</strong> 03/08/2025</p>
+                            <p><strong>Status:</strong> Visto</p>
+                            <p><strong>Nº de Protocolo:</strong> MANIF2025-0385</p>
+                        </div>
+                        <div class="card-summary">
+                            <p><strong>Aluno:</strong> Ana Clara da Silva Machado</p>
+                            <p><strong>Assunto:</strong> Professores e equipe</p>
+                            <p><strong>Resumo:</strong> A equipe da secretária é muito atenciosa, prestativa e resolveu meu problema rápido. Me trataram muito bem, Muito obrigada!</p>
+                        </div>
+                        <div class="card-actions">
+                            <button class="btn btn-resolvido">Resolvido</button>
+                            <button class="btn btn-respondido">Respondido</button>
+                        </div>
+                    </article>
+
+                    <article class="manifestation-card type-sugestoes">
+                        <div class="card-details">
+                            <p><strong>Tipo de Manifestação:</strong> <span class="type-text">Sugestões</span></p>
+                            <p><strong>Data de Publicação:</strong> 30/07/2025</p>
+                            <p><strong>Status:</strong> Visto</p>
+                            <p><strong>Nº de Protocolo:</strong> MANIF2025-0375</p>
+                        </div>
+                        <div class="card-summary">
+                            <p><strong>Aluno:</strong> Gabriel Oliveira de Souza</p>
+                            <p><strong>Assunto:</strong> Eventos</p>
+                            <p><strong>Resumo:</strong> Seria legal ter mais eventos na escola, talvez algumas competições como olimpiadas, show de talentos, algumas feiras, como feira cultural...</p>
+                        </div>
+                        <div class="card-actions">
+                            <button class="btn btn-resolvido-sugestoes">Resolvido</button>
+                            <button class="btn btn-respondido-sugestoes">Respondido</button>
+                        </div>
+                    </article>
+
+                    <article class="manifestation-card type-denuncia">
+                        <div class="card-details">
+                            <p><strong>Tipo de Manifestação:</strong> <span class="type-text">Denúncia</span></p>
+                            <p><strong>Data de Publicação:</strong> 15/07/2025</p>
+                            <p><strong>Status:</strong> Visto</p>
+                            <p><strong>Nº de Protocolo:</strong> MANIF2025-0575</p>
+                        </div>
+                        <div class="card-summary">
+                            <p><strong>Aluno:</strong> Mariana Barbosa do Nascimento</p>
+                            <p><strong>Assunto:</strong> Alunos</p>
+                            <p><strong>Resumo:</strong> Presenciei um caso de bullying no corredor durante o intervalo. Um aluno do 1º ano A estava xingando outro aluno.</p>
+                        </div>
+                        <div class="card-actions">
+                            <button class="btn btn-resolvido-denuncia">Resolvido</button>
+                            <button class="btn btn-respondido-denuncia">Respondido</button>
+                        </div>
+                    </article>
+                </div>
+                <div class="see-more-container">
+                    <button class="btn btn-see-more">Ver mais</button>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer IDÊNTICO ao código anterior -->
+    <footer class="site-footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-logo">
+                    <a href="colab_home.html" aria-label="Proaluno - Página inicial">
+                        <img src="imagens/logo_branca2.png" alt="Proaluno Logo" class="footer-logo">
+                    </a>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Início</h4>
+                        <ul>
+                            <li><a href="colab_home.html">Home</a></li>
+                            <li><a href="#">Sobre nós</a></li>
+                            <li><a href="#">Contato</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Contato</h4>
+                        <ul>
+                            <li>E-mail: proaluno@fieb.edu.br</li>
+                            <li>Telefone: (11) 91234-5678</li>
+                            <li>Atendimento: 8:00 às 17:00</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Suporte</h4>
+                        <ul>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Telefones</a></li>
+                            <li><a href="#">Chat</a></li>
+                            <li><a href="#">Feedback</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="footer-social">
+                    <div class="social-icons">
+                        <a href="#" aria-label="Twitter">𝕏</a>
+                        <a href="#" aria-label="Instagram">📷</a>
+                        <a href="#" aria-label="WhatsApp">💬</a>
+                    </div>
+                    <a href="#" class="footer-contact-button">Contato</a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 Proaluno. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROALUNO - Sistema de Denúncias</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+      <link rel="stylesheet" href="CSS/m_denuncias.css"> 
+
+</head>
+<body>
+    <header class="site-header" id="site-header">
+        <div class="header-container">
+            <div class="logo-container">
+                <a href="home.html" class="logo-link">
+                    <img src="imagens/logo vermelha.png" alt="Proaluno Logo" class="logo-img">
+                </a>
+            </div>
+
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="home.html" class="nav-link">INÍCIO</a></li>
+                        <li class="nav-item"><a href="sobre.html" class="nav-link">SOBRE NÓS</a></li>
+                        <li class="nav-item"><a href="contato.html" class="nav-link">CONTATO</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <div class="user-profile">
+                    <button class="user-toggle" aria-label="Menu do usuário">
+                        <div class="user-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <span class="user-greeting"><a href="aluno_perfil.html"> Olá aluno!</a></span>
+                    </button>
+                    <div class="user-menu">
+                        <a href="aluno_perfil.html" class="user-menu-item"><i class="fas fa-user-circle"></i> Minha Conta</a>
+                        
+                        <a href="login.html" class="user-menu-item"><i class="fas fa-sign-out-alt"></i> Sair</a>
+                    </div>
+                </div>
+
+                <button class="mobile-menu-toggle" aria-label="Abrir menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+
+        <nav class="mobile-nav">
+            <ul class="mobile-nav-list">
+                <li class="mobile-nav-item"><a href="#about" class="mobile-nav-link">SOBRE NÓS</a></li>
+                <li class="mobile-nav-item"><a href="#manifestation-types" class="mobile-nav-link">DENÚNCIAS</a></li>
+                <li class="mobile-nav-item"><a href="#news" class="mobile-nav-link">NOTÍCIAS</a></li>
+                <li class="mobile-nav-item"><a href="#satisfaction-survey" class="mobile-nav-link">FEEDBACK</a></li>
+                <li class="mobile-nav-item"><a href="#footer" class="mobile-nav-link">CONTATO</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="identification" class="identification-section">
+        <div class="container">
+            <h2 class="identification-title">Para registrar uma denúncia, selecione uma forma de identificação</h2>
+            <div class="choices-wrapper">
+                <div class="choice-card" data-option="identified">
+                    <div class="card-icon">
+                        <i class="fas fa-id-card"></i>
+                    </div>
+                    <h3>Denúncia Identificada</h3>
+                    <p>Entre em contato usando seu login da FIEB para realizar uma denúncia identificada. Sua identidade será visível para administradores.</p>
+                </div>
+                <div class="choice-card" data-option="anonymous">
+                    <div class="card-icon">
+                        <i class="fas fa-user-secret"></i>
+                    </div>
+                    <h3>Denúncia Anônima</h3>
+                    <p>Entre em contato de modo anônimo. Sua denúncia será enviada pela sua conta SOU FIEB sem revelar sua identidade.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="denuncia" class="denuncia-section">
+        <div class="container">
+            <header class="denuncia-header">
+                <h1>DENÚNCIA</h1>
+                <h2>Dados de manifestação</h2>
+                <p>Preencha os campos referentes à sua manifestação.</p>
+            </header>
+
+            <form class="complaint-form" id="complaintForm">
+                <!-- SEÇÃO 1: DADOS BÁSICOS -->
+                <div class="form-section">
+                    <h3 class="section-title">Dados Básicos</h3>
+                    
+                    <div class="form-group">
+                        <label for="unidade">Selecione sua UNIDADE</label>
+                        <div class="select-wrapper">
+                            <select id="unidade" required>
+                                <option value="" disabled selected>Ex: ITB Brasílio Flores de Azevedo</option>
+                                <option value="unidade1">ITB Brasílio Flores de Azevedo</option>
+                            </select>
+                            <div class="select-arrow">
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="nome">Nome</label>
+                            <input type="text" id="nome" placeholder="Digite aqui o seu nome">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" placeholder="Digite seu E-mail">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="telefone">Telefone Celular</label>
+                        <input type="tel" id="telefone" placeholder="Digite o número do seu Telefone Celular">
+                    </div>
+                </div>
+
+                <!-- SEÇÃO 2: DETALHES DA DENÚNCIA -->
+                <div class="form-section">
+                    <h3 class="section-title">Detalhes da Denúncia</h3>
+                    
+                    <div class="form-group">
+                        <label for="assunto">Assunto</label>
+                        <div class="select-wrapper">
+                            <select id="assunto" required>
+                                <option value="" disabled selected>Nos diga sobre o que a denúncia é</option>
+                                <option value="assunto1">Problemas com Infraestrutura</option>
+                                <option value="assunto2">Questões Pedagógicas</option>
+                                <option value="assunto3">Problemas com Funcionários</option>
+                                <option value="assunto4">Questões de Segurança</option>
+                                <option value="assunto5">Outros</option>
+                            </select>
+                            <div class="select-arrow">
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="local">Local</label>
+                        <input type="text" id="local" placeholder="Onde aconteceu?">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="descricao">Descrição</label>
+                        <textarea id="descricao" placeholder="Descreva o fato, relate os detalhes sobre sua manifestação." required></textarea>
+                    </div>
+                </div>
+
+                <!-- SEÇÃO 3: DETALHES ADICIONAIS -->
+                <div class="form-section">
+                    <h3 class="section-title">Detalhes Adicionais</h3>
+                    <p class="section-description">Nos conte mais a fundo o motivo da sua denúncia. Lembre-se que estamos aqui para te escutar e fazer as medidas cabíveis.</p>
+
+                    <div class="question-box involved-box">
+                        <label>Quem são os envolvidos?</label>
+                        <div class="involved-options">
+                            <div class="option-category">
+                                <div class="option-buttons">
+                                    <button type="button" class="involved-option">Diretores</button>
+                                    <button type="button" class="involved-option">Pais ou responsáveis</button>
+                                    <button type="button" class="involved-option">Desconhecido</button>
+                                    <button type="button" class="involved-option">Funções administrativas</button>
+                                    <button type="button" class="involved-option">Estagiários</button>
+                                    <button type="button" class="involved-option">Visitantes</button>
+                                    <button type="button" class="involved-option">Receios não identificados</button>
+                                    <button type="button" class="involved-option">Protestantes</button>
+                                </div>
+                            </div>
+                            <div class="option-category">
+                                <div class="option-buttons">
+                                    <button type="button" class="involved-option">Monitoras</button>
+                                    <button type="button" class="involved-option">Vigilantes de serviço</button>
+                                    <button type="button" class="involved-option">Anônimo</button>
+                                    <button type="button" class="involved-option">Coordenadores pedagógicos</button>
+                                    <button type="button" class="involved-option">Autros</button>
+                                    <button type="button" class="involved-option">Voluntários</button>
+                                    <button type="button" class="involved-option">Comunidade do entorno</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="selected-options">
+                            <label>Envolvidos selecionados:</label>
+                            <div class="selected-tags" id="selected-tags">
+                                <!-- Tags serão adicionadas dinamicamente -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="data">Quando aconteceu?</label>
+                        <input type="date" id="data">
+                    </div>
+                </div>
+
+                <!-- SEÇÃO 4: AÇÕES TOMADAS -->
+                <div class="form-section">
+                    <h3 class="section-title">Ações Tomadas</h3>
+                    
+                    <div class="question-box">
+                        <label>Você entrou em contato com algum auxiliar da sua unidade escolar?</label>
+                        <div class="radio-group">
+                            <label class="radio-option">
+                                <input type="radio" name="contato-auxiliar" value="sim">
+                                <span class="radio-custom"></span>
+                                Sim
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="contato-auxiliar" value="nao">
+                                <span class="radio-custom"></span>
+                                Não
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="question-box">
+                        <label>Deseja relatar o caso às autoridades?</label>
+                        <div class="radio-group">
+                            <label class="radio-option">
+                                <input type="radio" name="autoridades" value="sim">
+                                <span class="radio-custom"></span>
+                                Sim
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="autoridades" value="nao">
+                                <span class="radio-custom"></span>
+                                Não
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SEÇÃO 5: ANEXOS -->
+                <div class="form-section">
+                    <h3 class="section-title">Anexos</h3>
+                    
+                    <div class="question-box file-upload-box">
+                        <label>Nos ajuda anexando vídeos, áudios, qualquer arquivo que possa ajudar no caso. (Se tiver)</label>
+                        <div class="upload-area" id="uploadArea">
+                            <i class="fas fa-cloud-upload-alt"></i>
+                            <p>Envio de arquivos</p>
+                            <input type="file" id="fileInput" multiple style="display: none;">
+                        </div>
+                        <div class="file-list" id="fileList">
+                            <!-- Lista de arquivos será adicionada dinamicamente -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="submit-wrapper">
+                    <button type="submit" class="submit-btn" id="submitBtn">
+                        <span class="btn-text">ENVIAR DENÚNCIA</span>
+                        <div class="btn-loader">
+                            <div class="loader-dot"></div>
+                            <div class="loader-dot"></div>
+                            <div class="loader-dot"></div>
+                        </div>
+                    </button>
+                </div>
+            </form>
+
+            <div class="thank-you-page" id="thankYouPage">
+                <div class="thank-you-icon">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <h2>Denúncia Registrada com Sucesso!</h2>
+                <p>Sua denúncia foi enviada e será analisada pela nossa equipe. Obrigado por contribuir para um ambiente melhor.</p>
+                <div class="protocol-number" id="protocolNumber">
+                    <!-- Número de protocolo será gerado dinamicamente -->
+                </div>
+                <p>Anote o número de protocolo para acompanhar o andamento da sua denúncia.</p>
+                <button class="back-btn" id="backBtn">Fazer Nova Denúncia</button>
+                <button class="home-btn" id="homeBtn">Voltar para Home</button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer" id="footer">
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-logo">
+                    <img src="imagens/proaluno logo branca.png" alt="Proaluno Logo">
+                </div>
+
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Links Rápidos</h4>
+                        <ul>
+                            <li><a href="home.html">Página Inicial</a></li>
+                            <li><a href="#about">Sobre Nós</a></li>
+                            <li><a href="#manifestation-types">Denúncias</a></li>
+                            <li><a href="#news">Notícias</a></li>
+                            <li><a href="#satisfaction-survey">Feedback</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4>Suporte</h4>
+                        <ul>
+                            <li><a href="contato.html">Contato</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Política de Privacidade</a></li>
+                            <li><a href="#">Termos de Uso</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4>Contato</h4>
+                        <ul>
+                            <li><i class="fas fa-map-marker-alt"></i> Endereço: Rua Exemplo, 123</li>
+                            <li><i class="fas fa-phone"></i> Telefone: (11) 1234-5678</li>
+                            <li><i class="fas fa-envelope"></i> Email: contato@proaluno.com</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer-social">
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                    <a href="contato.html" class="footer-contact-button">Entre em Contato</a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2023 PROALUNO. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+          <script src="JS/m_denuncias.js"></script>
+
+</body>
+</html>

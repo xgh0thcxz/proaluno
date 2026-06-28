@@ -1,0 +1,196 @@
+/* ── Hero da Equipe ── */
+.teamHero {
+  text-align: center;
+  padding: 140px 20px 60px;
+  background: linear-gradient(135deg, rgba(220, 209, 246, 0.4) 0%, rgba(255, 255, 255, 1) 100%)
+  ;
+}
+
+.teamHeroLabel {
+  font-family: var(--font-primary);
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.15em;
+  color: var(--purple-deep);
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.teamHeroTitle {
+  font-family: var(--font-secondary);
+  font-weight: 700;
+  font-size: 3rem;
+  color: #1a1a1a;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.teamHeroHighlight {
+  color: var(--purple-deep);
+}
+
+.teamHeroSubtitle {
+  font-family: var(--font-primary);
+  font-size: 1.1rem;
+  color: var(--color-text-muted);
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* ── Seção de Cards ── */
+.teamSection {
+  padding: 40px 40px 80px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.teamGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  justify-items: center;
+}
+
+/* Os 3 últimos cartões formam a segunda linha centralizada */
+.teamCard:nth-child(5),
+.teamCard:nth-child(6),
+.teamCard:nth-child(7) {
+  grid-column: auto;
+}
+
+/* Empurra o 5º card para começar na coluna 1.5 (efeito centralizado) */
+.teamCard:nth-child(5) {
+  grid-column: 1 / 2;
+  margin-left: calc(50% + 16px); /* centraliza o bloco de 3 */
+}
+
+.teamRow {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  margin-bottom: 32px;
+}
+
+/* Para ajustar largura dos cards, se quiser responsividade */
+.teamRow .teamCard {
+  width: 240px; /* ou o tamanho que preferir */
+}
+
+
+/* ── Card individual ── */
+.teamCard {
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 32px 24px;
+  width: 100%;
+  max-width: 300px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.teamCard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.14);
+}
+
+/* ── Foto / Avatar ── */
+.teamPhotoWrapper {
+  width: 100%;
+  border-radius: 14px;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.teamPhoto {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 14px;
+  display: block;
+}
+
+.teamAvatar {
+  width: 100%;
+  height: 220px;
+  background: linear-gradient(135deg, var(--purple-mid), var(--purple-deep));
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-secondary);
+  font-weight: 700;
+  font-size: 3rem;
+  color: var(--color-text-light);
+}
+
+/* ── Texto ── */
+.memberName {
+  font-family: var(--font-secondary);
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+.memberRole {
+  font-family: var(--font-primary);
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+/* ── Botão Meet ── */
+.meetBtn {
+  margin-top: 8px;
+  padding: 10px 24px;
+  border: 2px solid #1a1a1a;
+  border-radius: 50px;
+  background: transparent;
+  font-family: var(--font-primary);
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  color: #1a1a1a;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.meetBtn:hover {
+  background-color: var(--purple-deep);
+  border-color: var(--purple-deep);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* ── Responsivo ── */
+@media (max-width: 768px) {
+  .teamHeroTitle {
+    font-size: 2rem;
+  }
+
+  .teamGrid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+  }
+
+  .teamSection {
+    padding: 30px 20px 60px;
+  }
+}
+@media (max-width: 900px) {
+  .teamCard {
+    width: calc(50% - 32px); /* 2 por linha */
+  }
+}
+
+@media (max-width: 500px) {
+  .teamCard {
+    width: 100%; /* 1 por linha */
+  }
+}

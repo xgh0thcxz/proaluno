@@ -1,0 +1,341 @@
+/* CS_CSS.module.css */
+
+/* ⚠️ Variáveis globais — mantenha no seu index.css ou global.css */
+/*
+:root {
+  --color-primary: #3d1d69;
+  --color-secondary: #872da5;
+  --color-accent: #dada5b;
+  --color-text-light: #ffffff;
+  --color-text-dark: #000000;
+  --color-background: #f7f7f7;
+  --color-gray: #696969;
+  --border-radius: 12px;
+  --shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  --shadow-hover: 0 12px 25px rgba(0, 0, 0, 0.15);
+  --transition: all 0.3s ease;
+  --font-main: 'Roboto', sans-serif;
+  --font-heading: 'Poppins', sans-serif;
+  --font-nav: 'Inter', sans-serif;
+}
+*/
+
+/* ===== BODY / WRAPPER ===== */
+.body {
+  font-family: var(--font-main);
+  line-height: 1.6;
+  color: var(--color-text-dark);
+  background-color: var(--color-background);
+  overflow-x: hidden;
+  max-width: 1920px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.container {
+  width: 90%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+/* ===== HERO SECTION ===== */
+.sectionHero {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  display: flex;
+  align-items: center;
+  min-height: 600px;
+  background: linear-gradient(135deg, rgba(220, 209, 246, 0.5) 0%, rgba(255, 255, 255, 1) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.heroContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  width: 90%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.heroContent {
+  flex: 1;
+  max-width: 782px;
+}
+
+.heroTitle {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 2.8rem;
+  line-height: 1.3;
+  color: var(--color-primary);
+  margin-bottom: 30px;
+}
+
+.heroText {
+  font-family: var(--font-main);
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.6;
+  color: #3f2f43;
+}
+
+.heroDecoration {
+  flex-shrink: 0;
+  width: 40%;
+  max-width: 500px;
+}
+
+/* ===== ABOUT SECTION ===== */
+.sectionAbout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.aboutCard {
+  background: linear-gradient(135deg, var(--color-secondary), var(--color-primary));
+  border-radius: 40px;
+  padding: 60px 80px;
+  max-width: 1225px;
+  text-align: center;
+  box-shadow: var(--shadow);
+}
+
+.aboutTitle {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: var(--color-text-light);
+  margin-bottom: 30px;
+}
+
+.aboutText {
+  font-family: var(--font-main);
+  font-weight: 400;
+  font-size: 1.3rem;
+  line-height: 1.6;
+  color: var(--color-text-light);
+}
+
+.aboutText + .aboutText {
+  margin-top: 20px;
+}
+
+/* ===== AUDIENCE SECTION ===== */
+.sectionAudience {
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.audienceHeader {
+  margin-bottom: 60px;
+}
+
+.audienceTitle {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 2.5rem;
+  color: var(--color-primary);
+  margin-bottom: 15px;
+}
+
+.audienceSubtitle {
+  font-family: var(--font-main);
+  font-weight: 400;
+  font-size: 1.3rem;
+  color: var(--color-gray);
+}
+
+.audienceGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin: 30px 0;
+  justify-content: center;
+}
+
+.audienceCard {
+  background: linear-gradient(135deg, rgba(220, 209, 246, 0.5) 6.25%, rgba(177, 159, 229, 0.5) 100%);
+  border-radius: 25px;
+  padding: 40px 30px;
+  width: 100%;
+  max-width: 350px;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.audienceCard:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+}
+
+.audienceCard h3 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: var(--color-primary);
+  margin-bottom: 20px;
+}
+
+.audienceCard p {
+  font-family: var(--font-main);
+  font-weight: 400;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: var(--color-gray);
+}
+
+.audienceFooter {
+  margin-top: 80px;
+  font-family: var(--font-heading);
+  font-weight: 500;
+  font-size: 1.5rem;
+  color: var(--color-primary);
+}
+
+/* ===== HOW IT WORKS SECTION ===== */
+.sectionHowItWorks {
+  background: linear-gradient(135deg, var(--color-secondary), var(--color-primary));
+  color: var(--color-text-light);
+  padding: 80px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.howItWorksTitle {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: var(--color-text-light);
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.howItWorksGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+  justify-content: center;
+}
+
+.howItWorksCard {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 25px;
+  padding: 40px 30px;
+  width: 100%;
+  max-width: 350px;
+  text-align: left;
+  position: relative;
+  padding-top: 20px;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.howItWorksCard:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+}
+
+.howItWorksCard h3 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+  color: var(--color-primary);
+}
+
+.howItWorksCard p {
+  font-family: var(--font-main);
+  font-weight: 400;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: var(--color-gray);
+}
+
+.stepNumber {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 18px;
+  position: absolute;
+  top: -15px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, var(--color-secondary), var(--color-primary));
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 1024px) {
+  .container {
+    padding: 40px 20px;
+  }
+  .heroContainer {
+    flex-direction: column;
+    text-align: center;
+  }
+  .heroDecoration {
+    display: none;
+  }
+  .heroTitle {
+    font-size: 2.2rem;
+  }
+  .heroText {
+    font-size: 1.2rem;
+  }
+  .aboutCard {
+    padding: 40px;
+    border-radius: 30px;
+  }
+  .aboutTitle {
+    font-size: 2rem;
+  }
+  .aboutText {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroTitle {
+    font-size: 1.8rem;
+  }
+  .heroText {
+    font-size: 1rem;
+  }
+  .aboutCard {
+    padding: 30px 20px;
+    border-radius: 20px;
+  }
+  .aboutTitle {
+    font-size: 1.8rem;
+  }
+  .aboutText {
+    font-size: 1rem;
+  }
+  .audienceTitle,
+  .howItWorksTitle {
+    font-size: 1.8rem;
+  }
+  .audienceSubtitle {
+    font-size: 1rem;
+  }
+}

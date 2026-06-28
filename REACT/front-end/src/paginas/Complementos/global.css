@@ -1,0 +1,211 @@
+/* ============================================================
+   GLOBAL.CSS — Variáveis Globais
+   Organizado por: cores fixas, temas por página, utilitários
+   ============================================================ */
+
+:root {
+
+    /* ─────────────────────────────────────────
+       🔴 FAMÍLIA VERMELHA
+    ───────────────────────────────────────── */
+    --red-primary:        #941010;
+    --red-primary-light:  #d34545;
+    --red-primary-dark:   #8B0000;
+    --red-dark:           #4e0a0a;
+    --red-secondary:      #f8d7d7;
+    --red-card-bg:        #eec3c3;
+    --red-accent:         #ff6d6d;
+
+    /* ─────────────────────────────────────────
+       🔵 FAMÍLIA AZUL
+    ───────────────────────────────────────── */
+    --blue-primary:       #0056b3;
+    --blue-primary-light: #2d7dd2;
+    --blue-primary-dark:  #004085;
+    --blue-secondary:     #e6f8ff;
+    --blue-accent:        #3399ff;
+    --blue-dark:          #161954;
+
+    /* ─────────────────────────────────────────
+       🟠 FAMÍLIA LARANJA / AMARELO
+    ───────────────────────────────────────── */
+    --orange-primary:       #ff7b00;
+    --orange-primary-light: #ff9e40;
+    --orange-primary-dark:  #cc6200;
+    --orange-secondary:     #ffdcc5;
+    --orange-accent:        #ff9e6d;
+    --orange-dark:          #542a16;
+
+    /* ─────────────────────────────────────────
+       🟢 FAMÍLIA VERDE
+    ───────────────────────────────────────── */
+    --green-primary:        #2e8b3d;
+    --green-primary-light:  #3cb350;
+    --green-primary-dark:   #228B22;
+    --green-secondary:      #E8F5E8;
+    --green-accent:         #66CDAA;
+    --green-dark:           #16541e;
+
+    /* ─────────────────────────────────────────
+       🟣 FAMÍLIA ROXO (claro — violet)
+    ───────────────────────────────────────── */
+    --violet-primary:       #7c3aed;
+    --violet-primary-light: #8b5cf6;
+    --violet-primary-dark:  #5b21b6;
+    --violet-secondary:     #c4b5fd;
+    --violet-accent:        #8b5cf6;
+    --violet-pale:          #ede9fe;
+    --violet-card-bg:       #f5f3ff;
+    --violet-status-bg:     #fef7ff;
+    --violet-divider:       #c4b5fd;
+    --violet-dark:          #381654;
+
+    /* ─────────────────────────────────────────
+       🟣 FAMÍLIA ROXO (escuro — purple)
+    ───────────────────────────────────────── */
+    --purple-primary:       #6A0DAD;
+    --purple-primary-light: #8A2BE2;
+    --purple-primary-dark:  #4e0082;
+    --purple-secondary:     #DCD6FF;
+    --purple-accent:        #9370DB;
+    --purple-deep:          #552893;
+    --purple-mid:           #874ebf;
+    --purple-light:         #b19fe5;
+    --purple-pale:          #dcd1f6;
+    --purple-dark:          #261654;
+
+    /* ─────────────────────────────────────────
+       ⚪ CORES NEUTRAS / TEXTO / FUNDO
+    ───────────────────────────────────────── */
+    --color-text-dark:        #2d3748;
+    --color-text-light:       #ffffff;
+    --color-text-muted:       #718096;
+    --color-background:       #ffffff;
+    --color-background-colab: #411669;
+    --color-background-alt:   #f8f9fa;
+    --color-background-light: #f5f7fa;
+    --color-border:           #e2e8f0;
+    --white-primary:          #ffffff;
+
+    /* ─────────────────────────────────────────
+       ✅ CORES DE STATUS
+    ───────────────────────────────────────── */
+    --color-success: #48bb78;
+    --color-warning: #ed8936;
+    --color-error:   #f56565;
+
+    /* ─────────────────────────────────────────
+       🔲 UTILITÁRIOS — Sombras, Bordas, etc.
+    ───────────────────────────────────────── */
+    --shadow-sm:    0 1px 3px rgba(0, 0, 0, 0.1);
+    --shadow:       0 4px 6px rgba(0, 0, 0, 0.05);
+    --shadow-md:    0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg:    0 10px 25px rgba(0, 0, 0, 0.1);
+    --shadow-xl:    0 20px 50px rgba(0, 0, 0, 0.2);
+    --shadow-hover: 0 15px 35px rgba(0, 0, 0, 0.15);
+
+    --border-radius:    12px;
+    --border-radius-lg: 20px;
+    --border-radius-xl: 28px;
+
+    --transition:   all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+
+    --font-primary:   'Inter', sans-serif;
+    --font-secondary: 'Poppins', sans-serif;
+
+    --header-height: 70px;
+
+    /* ─────────────────────────────────────────
+       🎨 TEMA PADRÃO (sobrescreva por página!)
+       Sem valor fixo aqui — cada página define
+    ───────────────────────────────────────── */
+    /* --color-primary:       var(--red-primary);
+    --color-primary-light: var(--red-primary-light);
+    --color-primary-dark:  var(--red-primary-dark);
+    --color-secondary:     var(--red-secondary);
+    --color-accent:        var(--red-accent); */
+}
+
+        
+html, body, #root {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100%;
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+}
+
+.body {
+
+    min-height: 100vh;
+    background-color: #ffffff;
+    color: var(--color-text-dark);
+    line-height: 1.6;
+    overflow-x: hidden;
+    font-family: 'Inter', sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.page-container {
+    max-width: 1920px;
+    margin: 0 auto;
+    position: relative;
+    min-height: 100vh;
+}
+
+.section-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+section {
+    padding: 40px 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    line-height: 1.3;
+    margin-bottom: 1rem;
+}
+
+h2 { font-size: 2.5rem; }
+
+p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition);
+}
+
+ul { list-style: none; }
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    font-family: inherit;
+    background: none;
+}
+
+/* main,
+.pageContent,
+.appWrapper {
+  padding-top: var(--header-height);
+} */
